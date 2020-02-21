@@ -1,0 +1,36 @@
+1.安装:
+sudo apt-get install apache2
+
+2.查看开启状态:
+命令:sudo service apache2 status
+
+或浏览器输入:
+localhost
+
+3.启动服务器:
+sudo service apache2 start
+
+停止服务器:
+sudo service apache2 stop
+
+重启服务器:
+sudo service apache2 restart
+
+刷新服务器:()
+sudo service apache2 reload
+
+
+4.服务器日志:
+/var/log/apache2/access.log
+默认情况下,对web服务器的每个请求都记录在此日志文件中,除非apache被配置为执行其他操作.
+
+/var/log/apache2/error.log
+默认情况下,所有错误都记录在此文件中.apache配置中的LogLevel指令指定错误日志将包含多好细节.
+
+5.修改web根目录位置:(修改两处文件)
+
+vim /etc/apache2/sites-available/000-default.conf 
+修改 DocumentRoot 的路径.
+
+vim /etc/apache2/apache2.conf
+修改 Directory 标签内的 路径.
